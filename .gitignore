@@ -1,10 +1,8 @@
-<<<<<<< HEAD
+#upload folders for flask site
+###############################
 uploads/*
 breedscoreplots/*
 
-
-=======
->>>>>>> 6bfacda0030ec827f20f0abbfa81027a7f24e093
 # Compiled source #
 ###################
 *.com
