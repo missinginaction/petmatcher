@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Petmatcher Demo - Python and Flask</title>
+  <h1>Find an adoptable pet with Petmatcher!</h1>
+</head>
+
+
+<body>
+    <header class="navbar">
+  <form method="post" enctype="multipart/form-data" >
+  	  <span>Upload your reference image here (.jpg, .png, .gif, .bmp' formats only).<br></span>
+      <span class="btn btn-default btn-file">
+          Browse your machine: <input type="file" name="file">
+      </span>
+
+    <input type="submit" name="submit" value="Upload your image" class="btn btn-primary"><br>
+    <input type="submit" name="submit" value="Classify breed" class="btn btn-primary">
+  </form>
+
+</header>
+
+</body>
+</html>
