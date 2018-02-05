@@ -124,3 +124,8 @@ venv.bak/
 
 #script temp files
 *~
+
+#large databases
+lookalike2.db
+storage.h5
+pfdfFULL.pkl
