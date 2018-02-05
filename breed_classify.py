@@ -1,21 +1,8 @@
-# Copyright 2017 The TensorFlow Authors. All Rights Reserved.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-# ==============================================================================
-
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
+
+import os
 
 import argparse
 import sys
@@ -23,10 +10,6 @@ import sys
 import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
-import seaborn as sns
-
-#BREEDS_FOLDER = os.path.basename('breedscoreplots')
-
 
 def load_graph(model_file):
   graph = tf.Graph()
@@ -71,7 +54,11 @@ def load_labels(label_file):
     label.append(l.rstrip())
   return label
 
-def top5graph(file_name):
+def top5graph(file,path):
+  file_name = path+'/'+file
+  filesplit = file.split('.')
+  filestr = filesplit[0]+'_breedscore.jpg'
+  #file_name = "uploads/yorkie.jpg"
   model_file = "pet_model_pure2/output_graph.pb"
   label_file = "pet_model_pure2/output_labels.txt"
   input_height = 299
@@ -105,17 +92,14 @@ def top5graph(file_name):
     breeds.append(labels[i]) 
     scores.append(results[i])
     
-  return breeds, scores
-  #y_pos = range(len(breeds))
+  y_pos = range(len(breeds))
  
-  #plt.barh(y_pos[::1], scores[::-1], align='center', alpha=0.5)
-  #plt.yticks(y_pos[::1], breeds[::-1])
-  #plt.xlabel('Scores')
-  #plt.title('Breed scores')
-  #plt.tight_layout()
-  #plt.show()
-  #f = os.path.join(app.config['BREEDS_FOLDER'], filename)
-  #plt.savefig(filestr)
-  
-  #return filestr.split('/')[1]
+  plt.barh(y_pos[::-1], scores, align='center', alpha=0.5)
+  plt.yticks(y_pos[::-1], breeds)
+  plt.xlabel('Scores')
+  plt.title('Breed scores')
+  plt.tight_layout()
+  plt.savefig('breedscoreplots/'+filestr)
+  plt.clf()
+  return filestr
 

@@ -60,8 +60,8 @@
           <div class="navigation ">
             <nav>
               <ul class="sf-menu">
-               <li class="current"><a href="/">LookAlike</a></li>
-               <li><a href="{{ url_for('breedguesser') }}">BreedGuesser</a></li>
+               <li><a href="/">LookAlike</a></li>
+               <li class="current"><a href="{{ url_for('breedguesser') }}">BreedGuesser</a></li>
                <li><a href="{{ url_for('underconst') }}">MoreInfo</a></li>
              </ul>
             </nav>
@@ -80,15 +80,13 @@
     <div class="row">
       <div class="grid_12">
         <div class="ta__center">
-          <h3>Find an adoptable pet with Look-Alike</h3>
-          <div class="st1">Upload your reference image here (.jpg, .png, .gif, .bmp formats only).<br>You will be matched with similar looking adoptable pets!<br><br></div>
-          
+          <h3>Find out a dog's breed with BreedGuesser</h3>
+          <div class="st1">Upload your reference image here (.jpg, .png, .gif, .bmp formats only).<br>You will be provided with its five most probable breeds based on its appearance.<br><br></div>
               <form enctype="multipart/form-data"  method="POST" id="inputform">
                 <input type="file" name="file" >
                 <p>Drag your file here<br>or click in this area to browse machine.</p>
-                <button type="submit" name="submit" value="Find similar pets" >Find similar pets</button>
+                <button type="submit" name="submit" value="Classify breed" >Classify breed</button>
               </form>
-          
         </div>
       </div>
     </div>
