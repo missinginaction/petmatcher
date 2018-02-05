@@ -17,13 +17,9 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import argparse
-import sys
 
 import numpy as np
 import tensorflow as tf
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 #BREEDS_FOLDER = os.path.basename('breedscoreplots')
 
@@ -106,16 +102,4 @@ def top5graph(file_name):
     scores.append(results[i])
     
   return breeds, scores
-  #y_pos = range(len(breeds))
- 
-  #plt.barh(y_pos[::1], scores[::-1], align='center', alpha=0.5)
-  #plt.yticks(y_pos[::1], breeds[::-1])
-  #plt.xlabel('Scores')
-  #plt.title('Breed scores')
-  #plt.tight_layout()
-  #plt.show()
-  #f = os.path.join(app.config['BREEDS_FOLDER'], filename)
-  #plt.savefig(filestr)
-  
-  #return filestr.split('/')[1]
 

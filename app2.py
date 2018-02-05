@@ -9,6 +9,8 @@ import os
 import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
+import seaborn as sns
+
 import breed_classify
 import extract_feature_vector
 import pandas as pd
@@ -17,6 +19,7 @@ import base64
 from PIL import Image
 from io import BytesIO
 
+sns.set(font_scale=2)
 
 app = Flask(__name__)
 

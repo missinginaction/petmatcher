@@ -15,9 +15,9 @@ import base64
 from PIL import Image
 from io import BytesIO
 import topfivebreeds
-import breed_classify
 import extract_feature_vector
-
+import seaborn as sns
+sns.set(font_scale=2)
 
 app = Flask(__name__)
 
