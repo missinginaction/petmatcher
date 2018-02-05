@@ -2,19 +2,20 @@
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory
 from werkzeug.utils import secure_filename
 
-import argparse
-import sys
 import os
 
 import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
+import seaborn as sns
+
 import pandas as pd
 from sklearn.metrics import pairwise
 import topfivebreeds
-import breed_classify
 import extract_feature_vector
 import math
+
+sns.set(font_scale=2)
 
 app = Flask(__name__)
 
@@ -125,6 +126,7 @@ def breedguesser():
                 plt.tight_layout()
                 f2 = os.path.join(app.config['BREEDS_FOLDER'], plotfilename)
                 plt.savefig(f2)
+                plt.close()
                 return render_template('breeddisplay.html', filename=filename, plotfilename=plotfilename)
 
     return render_template('breedguesser.html')

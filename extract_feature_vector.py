@@ -35,14 +35,9 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import argparse
-import os.path
-import re
 import sys
-import tarfile
 
 import numpy as np
-from six.moves import urllib
 import tensorflow as tf
 
 FLAGS = None

@@ -12,10 +12,12 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.metrics import pairwise
 import topfivebreeds
-import breed_classify
 import extract_feature_vector
 import sqlite3
 import math
+import seaborn as sns
+sns.set(font_scale=2)
+
 
 app = Flask(__name__)
 
