@@ -128,10 +128,6 @@ venv.bak/
 #large databases
 lookalike2.db
 storage.h5
-<<<<<<< HEAD
 pfdfFULL.pkl
 storage_red.h5
 pfdf_clean.pkl
-=======
-pfdfFULL.pkl
->>>>>>> b0c4c1a12551c53fc11bb52c66a964069dbaf0ab
