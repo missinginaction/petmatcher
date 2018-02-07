@@ -13,6 +13,17 @@
 # limitations under the License.
 # ==============================================================================
 
+'''
+The following functions will take an image
+and output its most likely categorizations, taken
+from labels in label_file, which are the outputs of
+the conv neural network model in model_file.
+
+top5graph returns the labels and scores for the
+5 most likely categories.
+'''
+
+
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
@@ -68,8 +79,8 @@ def load_labels(label_file):
   return label
 
 def top5graph(file_name):
-  model_file = "pet_model_pure2/output_graph.pb"
-  label_file = "pet_model_pure2/output_labels.txt"
+  model_file = "pet_model_1_4/output_graph.pb"
+  label_file = "pet_model_1_4/output_labels.txt"
   input_height = 299
   input_width = 299
   input_mean = 128

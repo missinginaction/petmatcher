@@ -13,7 +13,21 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Simple image classification with Inception.
+"""
+02/01/2018
+This code has been modified from the code provided by the Tensorflow image
+recognition tutorial.  The input image is run through the Inception model,
+but instead of classifying it, the pentultimate layer right before
+the classification stage is extracted, allowing us to describe the image
+with a 2048-dimensional vector.  This is called the pool_3:0 layer in
+run_inference_on_image
+"""
+
+
+"""
+Original description from tensorflow tutorial:
+
+Simple image classification with Inception.
 
 Run image classification with Inception trained on ImageNet 2012 Challenge data
 set.
@@ -46,7 +60,7 @@ FLAGS = None
 def create_graph():
   """Creates a graph from saved GraphDef file and returns a saver."""
   # Creates graph from saved graph_def.pb.
-  with tf.gfile.FastGFile('pet_model_pure2/output_graph.pb', 'rb') as f:
+  with tf.gfile.FastGFile('pet_model_1_4/output_graph.pb', 'rb') as f:
     graph_def = tf.GraphDef()
     graph_def.ParseFromString(f.read())
     _ = tf.import_graph_def(graph_def, name='')
