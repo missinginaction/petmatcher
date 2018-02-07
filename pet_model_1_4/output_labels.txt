@@ -1,0 +1,136 @@
+affenpinscher
+afghan hound
+african hunting dog
+airedale terrier
+akita
+alaskan malamute
+american bulldog
+american staffordshire terrier
+appenzell mountain dog
+australian cattle dog
+australian kelpie
+australian shepherd
+australian terrier
+basenji
+basset hound
+beagle
+bedlington terrier
+bernese mountain dog
+bichon frise
+black and tan coonhound
+blenheim spaniel
+bloodhound
+bluetick coonhound
+border collie
+border terrier
+borzoi
+boston terrier
+bouvier des flanders
+boxer
+briard
+brittany spaniel
+brussels griffon
+bull terrier
+bullmastiff
+cairn terrier
+cardigan
+catahoula leopard dog
+chesapeake bay retriever
+chihuahua
+chow chow
+clumber spaniel
+cocker spaniel
+collie
+curly coated retriever
+dachshund
+dandi dinmont terrier
+dhole
+dingo
+doberman pinscher
+english bulldog
+english foxhound
+english setter
+english springer spaniel
+entlebucher
+eskimo dog
+flat coated retriever
+french bulldog
+german shepherd dog
+german shorthaired pointer
+giant schnauzer
+golden retriever
+gordon setter
+great dane
+great pyrenees
+greater swiss mountain dog
+greyhound
+groenendael
+husky
+ibizan hound
+irish setter
+irish terrier
+irish water spaniel
+irish wolfhound
+italian greyhound
+jack russell terrier
+japanese chin
+keeshond
+kerry blue terrier
+komondor
+kuvasz
+labrador retriever
+lakeland terrier
+leonberger
+lhasa apso
+malinois
+maltese
+mastiff
+miniature pinscher
+miniature poodle
+miniature schnauzer
+newfoundland dog
+norfolk terrier
+norwegian elkhound
+norwich terrier
+old english sheepdog
+otterhound
+papillon
+pekingese
+pembroke
+pomeranian
+pug
+rat terrier
+redbone coonhound
+rhodesian ridgeback
+rottweiler
+saint bernard
+saluki
+samoyed
+schipperke
+schnauzer
+scottish deerhound
+scottish terrier scottie
+sealyham terrier
+shar pei
+shetland sheepdog sheltie
+shih tzu
+siberian husky
+silky terrier
+staffordshire bull terrier
+standard poodle
+standard schnauzer
+sussex spaniel
+tibetan mastiff
+tibetan terrier
+toy fox terrier
+toy poodle
+treeing walker coonhound
+vizsla
+weimaraner
+welsh springer spaniel
+west highland white terrier westie
+wheaten terrier
+whippet
+wirehaired terrier
+xoloitzcuintle
+yorkshire terrier yorkie

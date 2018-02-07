@@ -166,9 +166,14 @@ def breedguesser():
 
     return render_template('breedguesser.html')"""
 
+
 @app.route('/underconst', methods=['GET'])
 def underconst():
      return render_template('underconst.html')
+
+@app.route('/moreinfo', methods=['GET'])
+def moreinfo():
+     return render_template('moreinfo.html')
 
 
 @app.route('/breedscoreplots/<filename>')

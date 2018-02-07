@@ -21,11 +21,8 @@ but instead of classifying it, the pentultimate layer right before
 the classification stage is extracted, allowing us to describe the image
 with a 2048-dimensional vector.  This is called the pool_3:0 layer in
 run_inference_on_image
-"""
 
-
-"""
-Original description from tensorflow tutorial:
+.........Original description from tensorflow tutorial:...........
 
 Simple image classification with Inception.
 
