@@ -1,0 +1,118 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+<title>Look-Alike Pet Adoption</title>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<link rel="stylesheet" type=text/css href="{{ url_for('static', filename='stuck.css') }}">
+<link rel="stylesheet" type=text/css href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" type=text/css href="{{ url_for('static', filename='ihover.css') }}">
+
+<script src="{{ url_for('static', filename='jquery.js') }}"></script>
+<script src="{{ url_for('static', filename='jquery-migrate-1.1.1.js') }}"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<script src="{{ url_for('static', filename='superfish.js') }}"></script>
+<script src="{{ url_for('static', filename='jquery.equalheights.js') }}"></script>
+<script src="{{ url_for('static', filename='jquery.mobilemenu.js') }}"></script>
+<script src="{{ url_for('static', filename='jquery.easing.1.3.js') }}"></script>
+<script src="{{ url_for('static', filename='tmStickUp.js') }}"></script>
+<script src="{{ url_for('static', filename='jquery.ui.totop.js') }}"></script>
+<script src="{{ url_for('static', filename='uploadimg.js') }}"></script>
+<script src="{{ url_for('static', filename='drag_drop_files_1.js') }}"></script>
+<script>
+ $(document).ready(function(){
+  $().UItoTop({ easingType: 'easeOutQuart' });
+  $('#stuck_container').tmStickUp({});
+  });
+</script>
+
+
+
+
+<!--[if lt IE 9]>
+ <div style=' clear: both; text-align:center; position: relative;'>
+   <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+     <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+   </a>
+</div>
+<script src="js/html5shiv.js"></script>
+<link rel="stylesheet" media="screen" href="css/ie.css">
+<![endif]-->
+<!--[if lt IE 10]>
+<link rel="stylesheet" media="screen" href="css/ie1.css">
+<![endif]-->
+</head>
+<body id="top">
+<!--==============================
+              header
+=================================-->
+<header>
+<!--==============================
+            Stuck menu
+=================================-->
+  <section id="stuck_container">
+    <div class="container">
+      <div class="row">
+        <div class="grid_12">
+        <h1>
+          <a href="/">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Look-Alike Pets">
+          </a>
+        </h1>
+          <div class="navigation ">
+            <nav>
+              <ul class="sf-menu">
+               <li><a href="/">LookAlike</a></li>
+               <li class="current"><a href="{{ url_for('breedguesser') }}">BreedGuesser</a></li>
+               <li><a href="{{ url_for('underconst') }}">MoreInfo</a></li>
+             </ul>
+            </nav>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</header><!--=====================
+          Content
+======================-->
+
+
+<section class="content"><div class="ic">A Web App using Deep Learning to find similar looking pets</div>
+  <div class="container">
+    <div class="row">
+      <div class="grid_12">
+        <div class="ta__center">
+          <h3>Your BreedGuesser results</h3>   
+
+            <img style="width:500px" src="{{ url_for('uploaded_file',filename=filename) }}" alt="input doggy">
+            <img style="width:500px" src="{{ url_for('breed_plot',filename=plotfilename) }}" alt="breed guesses">
+ 
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--==============================
+              footer
+=================================-->
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="grid_12">
+        <div class="copyright"><span class="brand">Web Design</span> &copy; <span id="copyright-year"></span>  <div>Website designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
+
