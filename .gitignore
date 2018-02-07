@@ -124,6 +124,7 @@ venv.bak/
 
 #script temp files
 *~
+\#*#
 
 #large databases
 lookalike2.db

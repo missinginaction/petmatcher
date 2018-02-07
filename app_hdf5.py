@@ -6,7 +6,6 @@ import os
 
 import numpy as np
 import tensorflow as tf
-<<<<<<< HEAD
 from bokeh.plotting import figure
 from bokeh.embed import components
 from bokeh.io import export_png
@@ -18,19 +17,6 @@ import extract_feature_vector
 import math
 #import seaborn as sns
 #sns.set(font_scale=2)
-
-=======
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-import pandas as pd
-from sklearn.metrics import pairwise
-import topfivebreeds
-import extract_feature_vector
-import math
-
-sns.set(font_scale=2)
->>>>>>> b0c4c1a12551c53fc11bb52c66a964069dbaf0ab
 
 app = Flask(__name__)
 
@@ -102,15 +88,10 @@ def upload_file():
                 table_list = []
                 for i in range(1,31):
                     table_list.append('pf_vectors_'+'0'*(3-math.floor(math.log10(i)))+str(i))
-<<<<<<< HEAD
-                for table in table_list[:3]:
-                    df = pd.read_hdf('storage.h5',table)
-                    similarities=similarities.append(pd.Series(np.squeeze(cosine_similarity(df,input_vector.reshape(1,-1))), index=df.index))
-=======
+
                 for table in table_list[:10]:
                     df = pd.read_hdf('storage.h5',table)
-                    similarities=similarities.append(pd.Series(np.squeeze(pairwise.cosine_similarity(df,input_vector.reshape(1,-1))), index=df.index))
->>>>>>> b0c4c1a12551c53fc11bb52c66a964069dbaf0ab
+                    similarities=similarities.append(pd.Series(np.squeeze(cosine_similarity(df,input_vector.reshape(1,-1))), index=df.index))
                     del df
                 simpetsdf = maketop10df(similarities.sort_values(ascending=False,kind='heapsort').head(10))
                 tablestr = style+simpetsdf.to_html(justify='center',escape=False,index=False).replace("\\n","<br>")
@@ -118,11 +99,8 @@ def upload_file():
 
 
     return render_template('index.html')
-<<<<<<< HEAD
+
     
-"""@app.route('/breedguesser', methods=['GET'])
-def breedguesser():
-     return render_template('underconst.html')"""
      
 @app.route('/breedguesser', methods=['GET','POST'])
 def breedguesser():
@@ -156,11 +134,6 @@ def breedguesser():
     return render_template('breedguesser.html')
 
 """@app.route('/breedguesser', methods=['GET','POST'])
-=======
-
-
-@app.route('/breedguesser', methods=['GET','POST'])
->>>>>>> b0c4c1a12551c53fc11bb52c66a964069dbaf0ab
 def breedguesser():
     if request.method == 'POST':
         if 'file' not in request.files:
@@ -187,19 +160,12 @@ def breedguesser():
                 plt.tight_layout()
                 f2 = os.path.join(app.config['BREEDS_FOLDER'], plotfilename)
                 plt.savefig(f2)
-<<<<<<< HEAD
+                plt.close()
                 return render_template('breeddisplay.html', filename=filename, plotfilename=plotfilename)
 
 
     return render_template('breedguesser.html')"""
- 
-=======
-                plt.close()
-                return render_template('breeddisplay.html', filename=filename, plotfilename=plotfilename)
 
-    return render_template('breedguesser.html')
-
->>>>>>> b0c4c1a12551c53fc11bb52c66a964069dbaf0ab
 @app.route('/underconst', methods=['GET'])
 def underconst():
      return render_template('underconst.html')
