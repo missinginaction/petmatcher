@@ -89,7 +89,7 @@ def upload_file():
                 for i in range(1,31):
                     table_list.append('pf_vectors_'+'0'*(3-math.floor(math.log10(i)))+str(i))
 
-                for table in table_list[:10]:
+                for table in table_list[:7]:
                     df = pd.read_hdf('storage.h5',table)
                     similarities=similarities.append(pd.Series(np.squeeze(cosine_similarity(df,input_vector.reshape(1,-1))), index=df.index))
                     del df
