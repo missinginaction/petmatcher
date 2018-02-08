@@ -35,7 +35,7 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.',1)[1].lower() in ALLOWED_EXTENSIONS
 
 def maketop10df(top10list):
-    simpetsdf = pd.DataFrame(columns=['Picture','Pet Name','Breeds','Shelter/Location/Contact','Similarity\\nScore'])
+    simpetsdf = pd.DataFrame(columns=['Picture','Pet Name','Breeds','Shelter/Location/Contact','Percent\\nMatch'])
     for simpic in top10list.index:    
         petid,picnum = simpic.split('_')
         filestr = pfdf.loc[petid,'media'][int(picnum)-1][0]
@@ -59,7 +59,7 @@ def maketop10df(top10list):
                                                        + infodict['country'] + '\\n'
                                                        + infodict['email'])
 
-        simpetsdf.loc[simpic,'Similarity\\nScore'] = "{0:.4f}".format(top10list.loc[simpic])
+        simpetsdf.loc[simpic,'Percent\\nMatch'] = "{0:.2f}".format(top10list.loc[simpic]*100) + "%"
     return simpetsdf
 
 style = "<style> td{font-size: 18px;vertical-align: middle;text-align: center;} \
