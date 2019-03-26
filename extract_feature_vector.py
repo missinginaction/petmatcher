@@ -40,6 +40,9 @@ Please see the tutorial and website for a detailed description of how
 to use this script to perform image recognition.
 
 https://tensorflow.org/tutorials/image_recognition/
+
+
+24 March 2019 - some updates for tensorflow 1.14
 """
 
 from __future__ import absolute_import
@@ -57,7 +60,7 @@ FLAGS = None
 def create_graph():
   """Creates a graph from saved GraphDef file and returns a saver."""
   # Creates graph from saved graph_def.pb.
-  with tf.gfile.FastGFile('pet_model_1_4/output_graph.pb', 'rb') as f:
+  with tf.gfile.GFile('dog_breed_model/output_graph.pb', 'rb') as f:
     graph_def = tf.GraphDef()
     graph_def.ParseFromString(f.read())
     _ = tf.import_graph_def(graph_def, name='')
@@ -74,7 +77,7 @@ def run_inference_on_image(image):
   """
   if not tf.gfile.Exists(image):
     tf.logging.fatal('File does not exist %s', image)
-  image_data = tf.gfile.FastGFile(image, 'rb').read()
+  image_data = tf.gfile.GFile(image, 'rb').read()
 
   # Creates graph from saved GraphDef.
   create_graph()
@@ -92,4 +95,4 @@ def run_inference_on_image(image):
     feature_set = sess.run(feature_tensor,
                           {'DecodeJpeg/contents:0': image_data})
     feature_vector = np.squeeze(feature_set)
-    return feature_vector        
+    return feature_vector      
