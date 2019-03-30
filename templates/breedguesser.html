@@ -86,9 +86,22 @@
               <form enctype="multipart/form-data"  method="POST" id="inputform">
                 <input type="file" name="file" >
                 <p>Drag your file here<br>or click in this area to browse machine.</p>
-                <button type="submit" name="submit" value="Classify breed" >Classify breed</button>
+                <button type="submit" name="submit" value="Classify breed" onclick="$('#loading').show();">Classify breed</button>
               </form>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="content"><div class="ic">  </div>
+  <div class="container">
+    <div class="row">
+      <div class="grid_12">
+        <div class="ta__center">
+          <div id="loading" style="display:none;"><img src="http://www.animatedimages.org/data/media/202/animated-dog-image-0401.gif" alt="Fetch!" />Fetching your results...</div>
+  
+        </div>
+        
       </div>
     </div>
   </div>
